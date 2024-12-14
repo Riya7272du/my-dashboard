@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+Ques 1)Your approach to building the dashboard.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ans) The dashboard was developed using a modular, user-centric approach with React.js to ensure scalability, usability, and responsiveness.
 
-## Available Scripts
+1. Component-Based Architecture
+   The UI was divided into reusable components:
+   Sidebar: For navigation across key sections.
+   ProgressBar: Dynamically tracks and displays user progress.
+   InputForm: Handles user input, file uploads, and validation.
+   This modular approach improves code organization, reusability, and scalability.
 
-In the project directory, you can run:
+2. Styling and Layout
+   A clean, responsive design was implemented using:
+   CSS Flexbox for component alignment.
+   Media Queries for adaptability across desktop, tablet, and mobile devices.
+   Gradient backgrounds, hover effects, and user-friendly input styling to enhance visual appeal.
 
-### `npm start`
+3. Input Validation and Interactivity
+   Numeric fields use regular expressions to restrict input.  
+   File uploads include drag-and-drop styling and placeholders for clarity.
+   React hooks (useState) manage state and enable dynamic updates, like progress tracking and conditional rendering of form components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Responsive Design
+   The layout adapts for smaller screens by:
+   Collapsing the sidebar.
+   Stacking input forms vertically.
+   Adjusting the progress bar orientation for compact views.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Scalability
+   The component-based structure ensures new features or changes (e.g., steps in the progress bar or form fields) require minimal effort.
 
-### `npm test`
+This approach delivers a clean, responsive, and maintainable dashboard optimized for a seamless user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ques 2)The challenges faced and how you resolved them.
+Ans) Challenges Faced and Solutions
+a. Responsive Design
+Challenge: Adjusting the layout for smaller screens, particularly for complex components like input forms and progress bars.
+Solution: Used flexbox and media queries to dynamically resize and reposition components, ensuring proper alignment and readability on all devices.
 
-### `npm run build`
+b. Input Validation
+Challenge: Ensuring only numeric values are allowed for fields like "Contract Value" and "Claim Value".
+Solution: Added regular expressions in input handlers to validate user input and prevent non-numeric entries.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+c. File Uploads
+Challenge: Creating an intuitive UI for uploading documents while providing fallback options for users to type statements.
+Solution: Designed a user-friendly drag-and-drop upload box with appropriate labels and visual indicators.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+d. Progress Bar State Management
+Challenge: Dynamically updating the progress bar based on the current step of the process.
+Solution: Passed the current step as a prop to the ProgressBar component, which highlights completed steps dynamically.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ques 3)Any assumptions you made.
+Ans)
+Assumptions Made:-
+The progress steps in the progress bar are predefined and follow a linear order (e.g., Preliminary → Your Details → KYC, etc.).
+The file size limit for uploads is assumed to be 2MB with the format restricted to PDF.
+The place and language selection dropdown options were predefined (e.g., specific cities and languages).
+Validation focuses on basic requirements, such as allowing only numeric values where applicable.
